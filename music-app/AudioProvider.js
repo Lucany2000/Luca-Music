@@ -1,5 +1,6 @@
 import { Audio } from 'expo-av';
 import { StyleSheet, StatusBar, Button, View} from 'react-native';
+import { styles } from './App.js';
 
 const sound = new Audio.Sound();
 //let isPaused = false;
@@ -45,28 +46,12 @@ async function back(song) {
   play(song);
 }
 
-function SongGUI() {
-  return (
-    <View style={styles.container}>
-      <Button title="Playing Sound"/>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  safeAreaView: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight || 0
-  },
-  container: {
-    flex: 1,
-    width: "100%",
-    backgroundColor: '#fff',
-  },
-  row: {
-    width: "100%",
-    height: "auto"
-  }
-});
+// function SongGUI() {
+//   return (
+//     <View style={styles.container}>
+//       <Button title="Playing Sound"/>
+//     </View>
+//   );
+// }
 
 export { play, pause, resume, repeat, skip, back};
